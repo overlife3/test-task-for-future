@@ -1,0 +1,22 @@
+body,
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: var(--gray-color);
+}
+
+input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: var(--gray-color);
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,48 @@
+@import "../../../scss/mixins.scss";
+
+$heightInput: 38px;
+$borderRadius: 3px;
+.search {
+  display: flex;
+}
+
+.input {
+  flex-basis: 100%;
+  box-sizing: border-box;
+  height: $heightInput;
+  padding: 0 10px;
+
+  @include input;
+  border-right: none;
+  border-radius: $borderRadius;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 52px;
+  height: $heightInput;
+  border: 1px solid var(--gray-2-color);
+  border-left: none;
+  border-radius: $borderRadius;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: var(--gray-3-color);
+
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+    height: auto;
+    fill: var(--gray-color);
+  }
+
+  &:hover {
+    background-color: var(--gray-2-color);
+  }
+}

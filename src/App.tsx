@@ -1,9 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./pages/Main";
+import MissingPage from "./pages/Missing";
+import MainTemplate from "./templates/Main";
+import BookTemplate from "./templates/Book";
 
 function App() {
-  return <div className="App">Hello</div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<MainPage />}>
+          <Route index element={<MainTemplate />} />
+          <Route path="/book" element={<BookTemplate />} />
+        </Route>
+        <Route path="*" element={<MissingPage />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
