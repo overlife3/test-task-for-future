@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Book } from "../../types/types";
 import Cover from "../Cover/Cover";
+import ToBack from "../ToBack/ToBack";
 import style from "./BookInfo.module.scss";
 
 type Props = {
@@ -8,6 +10,7 @@ type Props = {
 };
 
 function BookInfo({ item }: Props) {
+  const navigate = useNavigate();
   return (
     <div className={style.container}>
       <div className={style.cover}>
@@ -20,6 +23,7 @@ function BookInfo({ item }: Props) {
         <p className={style.title}>{item.title || ""}</p>
         <p className={style.authors}>{item.authors.join(", ") || ""}</p>
         <p className={style.description}>{item.description || ""}</p>
+        <ToBack onClick={() => navigate(-1)} />
       </div>
     </div>
   );

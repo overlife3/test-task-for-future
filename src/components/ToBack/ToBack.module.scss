@@ -1,0 +1,23 @@
+.to_back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px;
+  background-color: var(--gray-color);
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.svg {
+  svg {
+    transform: rotate(90deg);
+    fill: white;
+    width: 16px;
+    height: auto;
+  }
+}
