@@ -7,10 +7,12 @@ $borderRadius: 3px;
 }
 
 .input {
-  flex-basis: 100%;
+  width: 100%;
   box-sizing: border-box;
   height: $heightInput;
   padding: 0 10px;
+  flex-grow: 10;
+  flex-shrink: 10;
 
   @include input;
   border-right: none;

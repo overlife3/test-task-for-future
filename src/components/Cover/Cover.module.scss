@@ -1,0 +1,21 @@
+.img {
+  box-shadow: 7px 7px 8px 0px rgba(34, 60, 80, 0.3);
+  width: auto;
+  height: 240px;
+  object-fit: contain;
+}
+
+.alt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 155px;
+  height: 240px;
+  padding: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  font-weight: lighter;
+  background-color: var(--gray-2-color);
+  box-shadow: 7px 7px 8px 0px rgba(34, 60, 80, 0.3);
+}

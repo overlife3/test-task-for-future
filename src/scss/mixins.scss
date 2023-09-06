@@ -1,3 +1,7 @@
 @mixin input {
   border: 1px solid var(--gray-2-color);
 }
+@mixin section {
+  margin-left: var(--safety-margin);
+  margin-right: var(--safety-margin);
+}

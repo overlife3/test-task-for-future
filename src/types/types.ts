@@ -8,3 +8,11 @@ export type Category =
   | "poetry";
 
 export type SortValues = "relevance" | "newest";
+
+export interface Book {
+  title: string;
+  authors: string[];
+  description: string;
+  image: string;
+  categories: string[];
+}

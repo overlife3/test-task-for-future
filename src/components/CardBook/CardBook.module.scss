@@ -1,0 +1,37 @@
+.card {
+  background-color: var(--gray-3-color);
+  width: 270px;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.container {
+  width: min-content;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  padding-top: 40px;
+}
+.category {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 200;
+  color: #777;
+  text-decoration: underline;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.author {
+  font-size: 15px;
+  color: #777;
+  font-weight: lighter;
+  margin: 0;
+}

@@ -1,7 +1,3 @@
-.form {
-  width: 800px;
-}
-
 .search_input {
   width: 100%;
   margin-bottom: 10px;
@@ -20,7 +16,11 @@
   .select {
     width: 100%;
   }
-  // &_title {
+}
 
-  // }
+@media (max-width: 640px) {
+  .bottom_fields {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
