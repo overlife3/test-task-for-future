@@ -15,9 +15,11 @@ function CardBook({ item, onClick }: Props) {
         <Cover src={item.image} />
       </div>
       <div className={style.info}>
-        <p className={style.category}>{item.categories[0] || ""}</p>
+        <p className={style.category}>
+          {item.categories && item.categories[0]}
+        </p>
         <p className={style.title}>{item.title || ""}</p>
-        <p className={style.author}>{item.authors.join(", ") || ""}</p>
+        <p className={style.author}>{item.authors?.join(", ") || ""}</p>
       </div>
     </div>
   );

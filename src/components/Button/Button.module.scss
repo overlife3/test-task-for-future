@@ -1,0 +1,13 @@
+.btn {
+  display: block;
+  width: 200px;
+  padding: 16px;
+  border-radius: 3px;
+  background-color: var(--gray-color);
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

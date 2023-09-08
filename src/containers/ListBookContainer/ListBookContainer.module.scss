@@ -1,0 +1,21 @@
+.loader {
+  width: min-content;
+  margin: 0 auto;
+  padding-top: 100px;
+  img {
+    width: 70px;
+  }
+}
+
+.missing {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.error {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 24px;
+  color: red;
+}

@@ -19,17 +19,17 @@ function InputSearch({ onSearch, cn, onChange, value }: Props) {
   };
 
   return (
-    <label className={searchCn}>
+    <div className={searchCn}>
       <input
         type="text"
         className={style.input}
         onChange={handleChange}
         value={value}
       />
-      <button className={style.search_btn} onClick={onSearch}>
+      <button type="submit" onClick={onSearch} className={style.search_btn}>
         <SvgSelector name="search" />
       </button>
-    </label>
+    </div>
   );
 }
 

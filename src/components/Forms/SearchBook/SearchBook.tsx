@@ -1,48 +1,53 @@
-import React from "react";
+import React, { useRef } from "react";
 import InputSearch from "../../Form/InputSearch/InputSearch";
 import { useForm } from "react-hook-form";
 import { Controller } from "react-hook-form";
-import { Category, SortValues } from "../../../types/types";
+import { SearchFields } from "../../../types/types";
 import Select from "../../Form/Select/Select";
 import { categories, sortValues } from "../../../data/data";
 import style from "./SearchBook.module.scss";
 
 type Props = {
-  onSubmit: () => void;
-};
-
-type FormState = {
-  name: string;
-  category: Category;
-  sorting: SortValues;
+  onSubmit: (data: SearchFields) => void;
 };
 
 function SearchBook({ onSubmit }: Props) {
+  const formRef = useRef<HTMLFormElement>(null);
   const {
     control,
-    register,
     formState: { errors, isValid, isSubmitted },
     handleSubmit,
-  } = useForm<FormState>({
+  } = useForm<SearchFields>({
     defaultValues: {
-      name: "",
-      category: "all",
-      sorting: "relevance",
+      intitle: "",
+      subject: "all",
+      orderBy: "relevance",
     },
     mode: "onSubmit",
   });
 
+  const onSearch = () => {
+    const current = formRef.current;
+    if (current) {
+      formRef.current.dispatchEvent(new Event("submit", { cancelable: true }));
+    }
+  };
+
   return (
-    <form className={style.form}>
+    <form
+      className={style.form}
+      onSubmit={handleSubmit(onSubmit)}
+      ref={formRef}
+    >
       <Controller
-        name="name"
+        name="intitle"
         control={control}
         render={({ field: { onChange, value } }) => (
           <InputSearch
             cn={style.search_input}
             onChange={onChange}
             value={value}
-            onSearch={() => {}}
+            onSearch={onSearch}
           />
         )}
       />
@@ -50,7 +55,7 @@ function SearchBook({ onSubmit }: Props) {
         <label className={style.field}>
           <p className={style.field_title}>Categories</p>
           <Controller
-            name="category"
+            name="subject"
             control={control}
             render={({ field: { onChange, value } }) => (
               <Select
@@ -63,9 +68,9 @@ function SearchBook({ onSubmit }: Props) {
           />
         </label>
         <label className={style.field}>
-          <p className={style.field_title}>Categories</p>
+          <p className={style.field_title}>Sorting by</p>
           <Controller
-            name="sorting"
+            name="orderBy"
             control={control}
             render={({ field: { onChange, value } }) => (
               <Select

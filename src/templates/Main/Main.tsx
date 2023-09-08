@@ -1,6 +1,6 @@
 import React from "react";
 import CountBooksContainer from "../../containers/CountBooksContainer";
-import ListBookContainer from "../../containers/ListBookContainer";
+import ListBookContainer from "../../containers/ListBookContainer/ListBookContainer";
 import style from "./Main.module.scss";
 
 function Main() {

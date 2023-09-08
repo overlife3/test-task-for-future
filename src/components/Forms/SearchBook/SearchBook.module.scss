@@ -13,6 +13,9 @@
   flex-basis: 100%;
   align-items: center;
   gap: 20px;
+  &_title {
+    white-space: nowrap;
+  }
   .select {
     width: 100%;
   }
