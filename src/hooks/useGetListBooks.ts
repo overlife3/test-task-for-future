@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { listBooksThunk } from "../api/thunks/listBooksThunk";
-import { useGetListBooksQuery } from "../api/list";
 import { areObjectsEqual } from "../helpers/areObjectsEqual";
 import { EmptySearch, Search } from "../types/types";
 import { useAppDispatch } from "./useAppDispatch";

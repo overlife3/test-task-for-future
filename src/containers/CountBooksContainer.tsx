@@ -1,5 +1,4 @@
 import React from "react";
-import { useGetListBooksQuery } from "../api/list";
 import CountBooks from "../components/CountBooks/CountBooks";
 import { useAppSelector } from "../hooks/useAppSelector";
 
