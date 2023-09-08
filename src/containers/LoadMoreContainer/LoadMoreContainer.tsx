@@ -1,6 +1,7 @@
 import React from "react";
 import { loadMoreThunk } from "../../api/thunks/loadMoreThunk";
 import Button from "../../components/Button/Button";
+import Error from "../../components/Error/Error";
 import Loader from "../../components/Loader/Loader";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { useAppSelector } from "../../hooks/useAppSelector";
@@ -20,6 +21,16 @@ function LoadMoreContainer() {
   if (emptyResponse) return null;
 
   if (isLoading) return <Loader visible={isLoading} cn={style.loader} />;
+
+  if (error)
+    return (
+      <Error
+        cn={style.error}
+        message="An error has occurred"
+        textBtn="Repeat"
+        onClick={() => dispatch(loadMoreThunk())}
+      />
+    );
 
   return <Button cn={style.btn} onClick={onClick} text={"Load more"} />;
 }
