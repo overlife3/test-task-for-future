@@ -13,7 +13,7 @@ function CardBookContainer({ item }: Props) {
     <CardBook
       item={item}
       onClick={() => {
-        navigate("/book");
+        navigate(`/${item.id}`);
       }}
     />
   );

@@ -11,7 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />}>
           <Route index element={<MainTemplate />} />
-          <Route path="/book" element={<BookTemplate />} />
+          <Route path="/:bookId" element={<BookTemplate />} />
+          {/* Можно было обойтись без динамических путей, а просто в store сохранить объект книги, и эти данные отображать */}
         </Route>
         <Route path="*" element={<MissingPage />} />
       </Routes>

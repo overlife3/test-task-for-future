@@ -19,10 +19,12 @@ function BookInfo({ item }: Props) {
         </div>
       </div>
       <div className={style.info}>
-        <p className={style.categories}>{item.categories.join("/") || ""}</p>
+        <p className={style.categories}>{item.categories?.join("/") || ""}</p>
         <p className={style.title}>{item.title || ""}</p>
-        <p className={style.authors}>{item.authors.join(", ") || ""}</p>
-        <p className={style.description}>{item.description || ""}</p>
+        <p className={style.authors}>{item.authors?.join(", ") || ""}</p>
+        {item.description ? (
+          <p className={style.description}>{item.description}</p>
+        ) : null}
         <ToBack onClick={() => navigate(-1)} />
       </div>
     </div>

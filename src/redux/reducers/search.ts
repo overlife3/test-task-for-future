@@ -5,7 +5,6 @@ import { SearchFields } from "../../types/types";
 type State = SearchFields;
 
 const initialState: State = {
-  // убрать три поля, которые я ввожу в форме. Или оставлю, но буду сохранять эти данные только после того,как получу данные
   intitle: "",
   orderBy: "relevance",
   subject: "all",

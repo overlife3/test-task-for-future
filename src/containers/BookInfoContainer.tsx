@@ -1,9 +1,14 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import BookInfo from "../components/BookInfo/BookInfo";
-import { bookMock } from "../MOCK/MOCK";
+import { useAppSelector } from "../hooks/useAppSelector";
 
 function BookInfoContainer() {
-  return <BookInfo item={bookMock} />;
+  const { bookId } = useParams();
+  const books = useAppSelector((store) => store.books.data);
+  const book = books.find((item) => item.id === bookId);
+  if (!book) return <p>Error</p>;
+  return <BookInfo item={book} />;
 }
 
 export default BookInfoContainer;
