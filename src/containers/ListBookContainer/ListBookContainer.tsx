@@ -10,6 +10,9 @@ import style from "./ListBookContainer.module.scss";
 function ListBookContainer() {
   const dispatch = useAppDispatch();
   const { data, error, isLoading } = useAppSelector((store) => store.books);
+  const emptyRequest = useAppSelector((store) => store.list.emptyRequest);
+
+  if (emptyRequest) return <h3>Enter the data into the form</h3>;
 
   if (isLoading) return <Loader visible={isLoading} cn={style.loader} />;
 

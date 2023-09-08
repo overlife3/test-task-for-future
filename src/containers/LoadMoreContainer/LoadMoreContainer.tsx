@@ -13,6 +13,7 @@ function LoadMoreContainer() {
   const { isLoading, error, emptyResponse } = useAppSelector(
     (store) => store.loadMore
   );
+
   const onClick = () => {
     dispatch(actions.increaseStartIndex());
     dispatch(loadMoreThunk());

@@ -4,6 +4,7 @@ import { useAppDispatch } from "../hooks/useAppDispatch";
 import { actions as actionsSearch } from "../redux/reducers/search";
 import { listBooksThunk } from "../api/thunks/listBooksThunk";
 import { isRequestListAllowed } from "../helpers/isRequestListAllowed";
+import { getListBooks } from "../api/getlistBooks";
 function SearchBookContainer() {
   const dispatch = useAppDispatch();
 
@@ -11,7 +12,7 @@ function SearchBookContainer() {
     <SearchBook
       onSubmit={(data) => {
         dispatch(actionsSearch.setFields(data));
-        if (isRequestListAllowed(data)) dispatch(listBooksThunk());
+        getListBooks(dispatch, data);
       }}
     />
   );
