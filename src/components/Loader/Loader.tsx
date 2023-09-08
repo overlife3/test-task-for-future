@@ -10,7 +10,9 @@ type Props = {
 
 function Loader({ visible, cn }: Props) {
   const loaderCn = classNames(style.loader, cn);
+
   if (!visible) return null;
+
   return (
     <div className={loaderCn}>
       <img src={loaderGif} alt="loading..." />

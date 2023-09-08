@@ -13,11 +13,7 @@ type Props = {
 
 function SearchBook({ onSubmit }: Props) {
   const formRef = useRef<HTMLFormElement>(null);
-  const {
-    control,
-    formState: { errors, isValid, isSubmitted },
-    handleSubmit,
-  } = useForm<SearchFields>({
+  const { control, handleSubmit } = useForm<SearchFields>({
     defaultValues: {
       intitle: "",
       subject: "all",

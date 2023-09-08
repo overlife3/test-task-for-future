@@ -4,11 +4,10 @@ import SvgSelector from "../SvgSelector/SvgSelector";
 import style from "./ToBack.module.scss";
 type Props = {
   cn?: string;
-  to?: string;
   onClick?: () => void;
 };
 
-function ToBack({ cn, to, onClick }: Props) {
+function ToBack({ cn, onClick }: Props) {
   const toBackCn = classNames(cn, style.to_back);
 
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = () => {

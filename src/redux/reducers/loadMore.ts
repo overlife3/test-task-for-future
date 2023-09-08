@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, SerializedError } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { listBooksThunk } from "../../api/thunks/listBooksThunk";
 import { loadMoreThunk } from "../../api/thunks/loadMoreThunk";
 import { MAX_RESULTS } from "../../constant";

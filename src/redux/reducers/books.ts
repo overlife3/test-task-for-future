@@ -1,6 +1,5 @@
-import { createSlice, PayloadAction, SerializedError } from "@reduxjs/toolkit";
-import { MAX_RESULTS } from "../../constant";
-import { Book, ResultGetList, SearchFields } from "../../types/types";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Book, ResultGetList } from "../../types/types";
 import { actions as actionsSearch } from "./search";
 import { listBooksThunk } from "../../api/thunks/listBooksThunk";
 import { loadMoreThunk } from "../../api/thunks/loadMoreThunk";

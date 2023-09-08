@@ -3,6 +3,7 @@ import CardBookContainer from "../../containers/CardBookContainer";
 import LoadMoreContainer from "../../containers/LoadMoreContainer/LoadMoreContainer";
 import { Book } from "../../types/types";
 import style from "./ListBook.module.scss";
+
 type Props = {
   items: Book[];
 };

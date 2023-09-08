@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import React from "react";
-import { Controller, Control } from "react-hook-form";
 import SvgSelector from "../../SvgSelector/SvgSelector";
 import style from "./InputSearch.module.scss";
 

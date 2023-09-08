@@ -1,5 +1,4 @@
 import React from "react";
-import { listBooksThunk } from "../../api/thunks/listBooksThunk";
 import { loadMoreThunk } from "../../api/thunks/loadMoreThunk";
 import Button from "../../components/Button/Button";
 import Loader from "../../components/Loader/Loader";
