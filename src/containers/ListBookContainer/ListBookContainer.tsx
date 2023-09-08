@@ -7,7 +7,7 @@ import { actions } from "../../redux/reducers/search";
 import style from "./ListBookContainer.module.scss";
 function ListBookContainer() {
   const { data, error, isLoading } = useAppSelector((store) => store.books);
-  useGetListBooks();
+  // useGetListBooks();
 
   if (error) return <p className={style.error}>Error</p>;
 
