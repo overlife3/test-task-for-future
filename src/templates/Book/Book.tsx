@@ -1,5 +1,5 @@
 import React from "react";
-import BookInfoContainer from "../../containers/BookInfoContainer";
+import BookInfoContainer from "../../containers/BookInfoContainer/BookInfoContainer";
 import style from "./Book.module.scss";
 
 function Book() {

@@ -19,7 +19,7 @@ function LoadMoreContainer() {
     dispatch(loadMoreThunk());
   };
 
-  if (emptyResponse) return null;
+  if (emptyResponse) return null; // если пришло книг меньше шага пагинации, то кнопка должна скрываться
 
   if (isLoading) return <Loader visible={isLoading} cn={style.loader} />;
 
