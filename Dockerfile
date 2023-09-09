@@ -1,8 +1,8 @@
-FROM node:latest
-
-COPY . ./app
+FROM node:14
 WORKDIR /app
-RUN npm i
+COPY package*.json ./
+RUN npm install
+COPY . .
 RUN npm run build
-ENTRYPOINT  npm run start
-EXPOSE 3000
+EXPOSE 80
+CMD [ "npm", "start" ]
